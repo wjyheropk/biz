@@ -1,8 +1,4 @@
-/*
- * Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
- */
-
-package com.baidu.brandps.biz.proxy;
+package com.biz.proxy;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,6 +1,6 @@
-package com.baidu.brandps.biz.proxy;
+package com.biz.proxy;
 
-import com.baidu.brandps.biz.sample.bean.ProductLine;
+import com.biz.sample.bean.ProductLine;
 
 /**
  * 标记一段业务逻辑/业务组件是哪个产品线的业务实现

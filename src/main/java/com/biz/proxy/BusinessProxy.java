@@ -2,7 +2,7 @@
  * Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
  */
 
-package com.baidu.brandps.biz.proxy;
+package com.biz.proxy;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -12,9 +12,9 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.baidu.brandps.biz.Business;
-import com.baidu.brandps.biz.sample.bean.Channel;
-import com.baidu.brandps.biz.sample.bean.ProductLine;
+import com.biz.Business;
+import com.biz.sample.bean.Channel;
+import com.biz.sample.bean.ProductLine;
 import com.google.common.collect.Lists;
 
 /**
@@ -33,12 +33,12 @@ public class BusinessProxy {
     /**
      * 用于保存当前线程的产品线信息
      */
-    public static ThreadLocal<ProductLine> currentProductLine = new ThreadLocal<>();
+    private ThreadLocal<ProductLine> currentProductLine = new ThreadLocal<>();
 
     /**
      * 用于保存当前线程的频道信息
      */
-    public static ThreadLocal<Channel> currentChannel = new ThreadLocal<>();
+    private ThreadLocal<Channel> currentChannel = new ThreadLocal<>();
 
     @Autowired
     private List<Business> businesses;
@@ -127,5 +127,15 @@ public class BusinessProxy {
         }
 
         return null;
+    }
+
+    public BusinessProxy setCurrentProductLine(ProductLine p) {
+        currentProductLine.set(p);
+        return this;
+    }
+
+    public BusinessProxy setCurrentChannel(Channel c) {
+        currentChannel.set(c);
+        return this;
     }
 }

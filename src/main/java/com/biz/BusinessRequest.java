@@ -1,4 +1,4 @@
-package com.baidu.brandps.biz;
+package com.biz;
 
 /**
  * 业务组件请求

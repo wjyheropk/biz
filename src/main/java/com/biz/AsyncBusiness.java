@@ -1,8 +1,4 @@
-/*
- * Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
- */
-
-package com.baidu.brandps.biz;
+package com.biz;
 
 /**
  * 异步业务组件
