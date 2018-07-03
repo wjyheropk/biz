@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
- */
-
 package com.biz.proxy;
 
 import org.aspectj.lang.JoinPoint;
